@@ -12,7 +12,10 @@ const HomePage = () => {
 
   return (
     <Container>
-        <h1>All Posts</h1>
+        <Row>
+            <Col><h1>All Posts</h1></Col>
+            <Col className="justify-content-end"><Button variant="primary" href={`/post/add`}>Add Post</Button></Col>
+        </Row>
         <Row>
             {allPosts.map(post => (
                 <Col md={4} key={post.id}>
